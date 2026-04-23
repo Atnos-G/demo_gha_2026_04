@@ -3,7 +3,7 @@ name: 'Demo GHA'
 on:
   push:
     branches:
-      -main
+      - main
 
 jobs:
   job1:
