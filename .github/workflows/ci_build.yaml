@@ -38,7 +38,7 @@ jobs:
          with:
            name: ${{ needs.build.outputs.artifact_name }}
            path: artifact
-
+           
         - name: 'Extract Artifact'
           run: unzip artifact/*.zip -d extracted
 
