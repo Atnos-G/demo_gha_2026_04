@@ -1,1 +1,1 @@
-INSERT INTO table_dev (name) VALUES('Gaetan');
+INSERT INTO table_dev (name) VALUES ('Gaetan');
