@@ -46,3 +46,16 @@ deploy:
       run: |
         sudo apt-get update
         sudo apt-get install -y postgresql-client
+
+    - name: 'Execute SQL'
+      run: |
+        export PGPASSWORD="$SUPABASE_PASSWORD"
+        psql -h "$SUPABASE_HOST" \
+            -p 5432 \
+            -d postgres \
+            -U "$SUPABASE_USER" \
+            -f extracted/scripts/dev.sql
+      env:
+        SUPABASE_HOST: aws-1-eu-central-1.pooler.supabase.com
+        SUPABASE_USER: postgres.qxqpncxzbiuhsodhgmwk
+        SUPABASE_PASSWORD: demogha2026
